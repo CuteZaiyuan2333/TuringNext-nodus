@@ -15,6 +15,12 @@ pub mod terminal;
 #[cfg(feature = "plugin_test_plugin")]
 pub mod test_plugin;
 
+#[cfg(feature = "plugin_turing_next")]
+pub mod turing_next;
+
+#[cfg(feature = "plugin_visual_flow_canvas")]
+pub mod visual_flow_canvas;
+
 
 // Plugin Name Constants
 #[cfg(feature = "plugin_code_editor")]
@@ -27,6 +33,10 @@ pub const PLUGIN_NAME_MANAGER: &str = "manager";
 pub const PLUGIN_NAME_TERMINAL: &str = "terminal";
 #[cfg(feature = "plugin_test_plugin")]
 pub const PLUGIN_NAME_TEST_PLUGIN: &str = "test_plugin";
+#[cfg(feature = "plugin_turing_next")]
+pub const PLUGIN_NAME_TURING_NEXT: &str = "turing_next";
+#[cfg(feature = "plugin_visual_flow_canvas")]
+pub const PLUGIN_NAME_VISUAL_FLOW_CANVAS: &str = "visual_flow_canvas";
 
 pub fn get_extra_plugins() -> Vec<Box<dyn crate::Plugin>> {
     let mut plugins: Vec<Box<dyn crate::Plugin>> = Vec::new();
@@ -58,6 +68,18 @@ pub fn get_extra_plugins() -> Vec<Box<dyn crate::Plugin>> {
         {
             let p = Box::new(test_plugin::create());
             assert_eq!(p.name(), PLUGIN_NAME_TEST_PLUGIN, "Plugin name mismatch for test_plugin");
+            plugins.push(p);
+        }
+        #[cfg(feature = "plugin_turing_next")]
+        {
+            let p = Box::new(turing_next::create());
+            assert_eq!(p.name(), PLUGIN_NAME_TURING_NEXT, "Plugin name mismatch for turing_next");
+            plugins.push(p);
+        }
+        #[cfg(feature = "plugin_visual_flow_canvas")]
+        {
+            let p = Box::new(visual_flow_canvas::create());
+            assert_eq!(p.name(), PLUGIN_NAME_VISUAL_FLOW_CANVAS, "Plugin name mismatch for visual_flow_canvas");
             plugins.push(p);
         }
     plugins

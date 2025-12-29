@@ -1,0 +1,12 @@
+[plugin]
+name = "turing_next"
+display_name = "Circuit Canvas"
+version = "0.1.0"
+author = "TuringNext Team"
+description = "A powerful logic circuit editor based on egui_node_graph2."
+dependencies = ["core"]
+
+[external_dependencies]
+egui_node_graph2 = "0.7"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"

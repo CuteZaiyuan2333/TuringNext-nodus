@@ -1,0 +1,50 @@
+/*NHD_METADATA
+namespace = "IO"
+
+[[definitions]]
+name = "Print"
+function_name = "print_log"
+category = "Standard"
+inputs = [{ name = "in", type = "Flow" }, { name = "msg", type = "String" }]
+outputs = [{ name = "out", type = "Flow" }]
+
+[[definitions]]
+name = "String Literal"
+function_name = "string_val"
+category = "Constants"
+widget = "string_input"
+outputs = [{ name = "val", type = "String" }]
+
+[[definitions]]
+name = "Read File"
+function_name = "read_file"
+category = "FileSystem"
+inputs = [{ name = "in", type = "Flow" }, { name = "path", type = "String" }]
+outputs = [{ name = "out", type = "Flow" }, { name = "content", type = "String" }]
+
+[[definitions]]
+name = "Write File"
+function_name = "write_file"
+category = "FileSystem"
+inputs = [{ name = "in", type = "Flow" }, { name = "path", type = "String" }, { name = "content", type = "String" }]
+outputs = [{ name = "out", type = "Flow" }, { name = "success", type = "Bool" }]
+
+[[definitions]]
+name = "Confirm Box"
+function_name = "confirm"
+category = "Standard"
+widget = "checkbox"
+outputs = [{ name = "val", type = "Bool" }]
+
+[[definitions]]
+name = "Log Level"
+function_name = "set_log_level"
+category = "Standard"
+widget = "dropdown"
+outputs = [{ name = "level", type = "String" }]
+NHD_METADATA*/
+
+fn print_log(msg) { print(msg); }
+fn string_val() {}
+fn read_file(path) {}
+fn write_file(path, content) {}

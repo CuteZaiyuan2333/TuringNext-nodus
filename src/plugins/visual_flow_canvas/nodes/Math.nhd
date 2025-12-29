@@ -1,0 +1,28 @@
+/*NHD_METADATA
+namespace = "Math"
+
+[[definitions]]
+name = "Add"
+function_name = "add"
+category = "Operators"
+inputs = [{ name = "a", type = "Number" }, { name = "b", type = "Number" }]
+outputs = [{ name = "sum", type = "Number" }]
+
+[[definitions]]
+name = "Subtract"
+function_name = "sub"
+category = "Operators"
+inputs = [{ name = "a", type = "Number" }, { name = "b", type = "Number" }]
+outputs = [{ name = "diff", type = "Number" }]
+
+[[definitions]]
+name = "Multiply"
+function_name = "mul"
+category = "Operators"
+inputs = [{ name = "a", type = "Number" }, { name = "b", type = "Number" }]
+outputs = [{ name = "product", type = "Number" }]
+NHD_METADATA*/
+
+fn add(a, b) { a + b }
+fn sub(a, b) { a - b }
+fn mul(a, b) { a * b }

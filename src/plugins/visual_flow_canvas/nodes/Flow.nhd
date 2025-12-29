@@ -1,0 +1,19 @@
+/*NHD_METADATA
+namespace = "Flow"
+
+[[definitions]]
+name = "Start"
+function_name = "start"
+category = "Core"
+outputs = [{ name = "next", type = "Flow" }]
+
+[[definitions]]
+name = "If"
+function_name = "branch"
+category = "Control"
+inputs = [{ name = "in", type = "Flow" }, { name = "condition", type = "Bool" }]
+outputs = [{ name = "true", type = "Flow" }, { name = "false", type = "Flow" }]
+NHD_METADATA*/
+
+fn start() {}
+fn branch(condition) {}
